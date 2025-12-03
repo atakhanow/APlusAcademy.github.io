@@ -14,4 +14,5 @@ COMPLETE_*.md
 SEO_*.md
 TELEGRAM_*.md
 *.sql
-
+.git
+.gitignore

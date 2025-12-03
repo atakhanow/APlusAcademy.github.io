@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient } from "@supabase/supabase-js";
 import type {
   Course,
   Teacher,
@@ -12,17 +12,19 @@ import type {
   Testimonial,
   GalleryItem,
   ScheduleEntry,
-} from '@shared/schema';
+} from "@shared/schema";
 
 // Supabase konfiguratsiyasi
 // Bu qiymatlar environment variable'lardan olinishi kerak
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "";
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || "";
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn(
-    'Supabase URL va Anon Key topilmadi. ' +
-    'Iltimos, .env faylida VITE_SUPABASE_URL va VITE_SUPABASE_ANON_KEY ni belgilang.'
+  console.error(
+    "❌ Supabase URL va Anon Key topilmadi!\n" +
+      "Iltimos, Vercel Dashboard → Settings → Environment Variables bo'limiga o'ting va quyidagilarni qo'shing:\n" +
+      "- VITE_SUPABASE_URL\n" +
+      "- VITE_SUPABASE_ANON_KEY"
   );
 }
 
@@ -43,4 +45,3 @@ export type {
   GalleryItem,
   ScheduleEntry,
 };
-
