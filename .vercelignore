@@ -1,0 +1,17 @@
+node_modules
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+*.tar.gz
+attached_assets
+examples
+supabase/functions
+*.md
+!README.md
+COMPLETE_*.md
+SEO_*.md
+TELEGRAM_*.md
+*.sql
+
